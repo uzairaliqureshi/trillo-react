@@ -1,0 +1,36 @@
+@import "./index.scss";
+
+.container {
+  background-color: var(--color-grey-light-2);
+  margin: 7rem;
+  box-shadow: var(--box-shadow);
+
+  @include mediaQuery(desktop) {
+    margin: 0;
+  }
+
+  .content {
+    display: flex;
+
+    @include mediaQuery(phone) {
+      flex-direction: column;
+    }
+  }
+
+  .hotel-view {
+    flex: 1 1;
+  }
+
+  .detail {
+    padding: 4.5rem;
+    display: flex;
+    gap: 4rem;
+    font-size: 1.4rem;
+    color: var(--color-grey-dark-2);
+
+    @include mediaQuery(tab-land) {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+}

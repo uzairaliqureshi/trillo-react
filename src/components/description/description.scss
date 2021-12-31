@@ -1,0 +1,63 @@
+@import "../../index.scss";
+
+.description {
+  flex: 0 1 60%;
+  padding: 3rem;
+  background-color: #fff;
+
+  @include mediaQuery(tab-land) {
+    flex: 0 1 auto;
+  }
+
+  & > p {
+    margin-bottom: 2rem;
+  }
+
+  & > ul {
+    border-top: var(--line);
+    border-bottom: var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+
+    & > li {
+      flex: 0 0 50%;
+      list-style: none;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+
+      & > span {
+        flex: 0 0 auto;
+      }
+
+      & > svg {
+        fill: var(--color-primary);
+        height: 1rem;
+      }
+    }
+  }
+}
+
+.recommend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+
+  & > p {
+    color: var(--color-grey-dark-3);
+    font-size: 1.2rem;
+  }
+
+  &__images {
+    display: flex;
+    & > img {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      border: var(--line);
+      margin-left: -1rem;
+    }
+  }
+}

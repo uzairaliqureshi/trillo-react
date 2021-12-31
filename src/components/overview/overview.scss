@@ -1,0 +1,86 @@
+@import "../../index.scss";
+
+.overview {
+  display: flex;
+  align-items: center;
+  color: var(--color-grey-dark-3);
+  background-color: #fff;
+  border-bottom: var(--line);
+
+  &__heading {
+    font-weight: 300;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+
+    @include mediaQuery(phone) {
+      padding: 1rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__stars {
+    margin-right: auto;
+    display: flex;
+
+    & > svg {
+      fill: var(--color-primary);
+
+      @include mediaQuery(phone) {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+
+    & > svg {
+      fill: var(--color-primary);
+      height: 3rem;
+    }
+
+    &-btn {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: var(--color-primary);
+      border-bottom: 1px solid currentColor;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-grey-dark-3);
+      }
+
+      &:focus {
+        color: var(--color-grey-dark-3);
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__rating {
+    align-self: stretch;
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+
+    &-average {
+      font-weight: 100;
+      font-size: 2.5rem;
+    }
+
+    &-count {
+      font-weight: 100;
+      font-size: 1rem;
+    }
+  }
+}
